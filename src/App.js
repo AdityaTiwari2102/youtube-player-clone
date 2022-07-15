@@ -1,7 +1,7 @@
 import video from './assets/Video.mp4';
 import './App.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCoffee, fa4 } from '@fortawesome/free-solid-svg-icons';
+import { faPlay, faPause } from '@fortawesome/free-solid-svg-icons';
 
 function App() {
   return (
@@ -12,6 +12,8 @@ function App() {
         </div>
         <div className='controls'>
           <button className="play-pause-btn">
+            <FontAwesomeIcon icon={faPlay} className="play-icon" />
+            <FontAwesomeIcon icon={faPause} className="pause-icon" />
           </button>
         </div>
       </div>
