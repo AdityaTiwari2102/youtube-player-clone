@@ -7,6 +7,15 @@ window.onload=function(){
     video.paused ? video.play() : video.pause()
   }
 
+  document.addEventListener("keydown", e => {
+    switch(e.key.toLowerCase()) {
+      case " ":
+      case "k":
+        togglePlay()
+        break
+    }
+  })
+
   playPauseBtn.addEventListener("click", togglePlay)
 
   video.addEventListener("play", () => {
