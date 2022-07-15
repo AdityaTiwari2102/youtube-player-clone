@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCoffee, fa4 } from '@fortawesome/free-solid-svg-icons';
