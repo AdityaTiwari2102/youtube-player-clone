@@ -3,6 +3,7 @@ window.onload=function(){
   const videoContainer = document.querySelector(".video-container")
   const video = document.querySelector("video")
 
+  // Play or pause 
   const togglePlay = () => {
     video.paused ? video.play() : video.pause()
   }
