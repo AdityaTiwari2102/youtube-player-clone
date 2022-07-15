@@ -17,6 +17,7 @@ window.onload=function(){
   })
 
   playPauseBtn.addEventListener("click", togglePlay)
+  video.addEventListener("click", togglePlay)
 
   video.addEventListener("play", () => {
     videoContainer.classList.remove("paused")
