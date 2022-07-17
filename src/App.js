@@ -2,7 +2,7 @@ import video from './assets/Video.mp4';
 import './App.css';
 import './player.js';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlay, faPause } from '@fortawesome/free-solid-svg-icons';
+import { faPlay, faPause, faExpand, faCompress } from '@fortawesome/free-solid-svg-icons';
 
 function App() {
   return (
@@ -21,6 +21,10 @@ function App() {
             </svg>
             {/* <FontAwesomeIcon icon={faPlay} className="play-icon" />
             <FontAwesomeIcon icon={faPause} className="pause-icon" /> */}
+          </button>
+          <button className="full-screen-btn">
+            <FontAwesomeIcon icon={faExpand} className="open" />
+            <FontAwesomeIcon icon={faCompress} className="close" />
           </button>
         </div>
       </div>
