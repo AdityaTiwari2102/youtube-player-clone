@@ -2,12 +2,14 @@ window.onload=function(){
   const playPauseBtn = document.querySelector(".play-pause-btn")
   const theaterBtn = document.querySelector(".theater-btn")
   const fullScreenBtn = document.querySelector(".full-screen-btn")
+  const miniPlayerBtn = document.querySelector(".mini-player-btn")
   const videoContainer = document.querySelector(".video-container")
   const video = document.querySelector("video")
 
   // View mode
   theaterBtn.addEventListener("click", toggleTheaterMode)
   fullScreenBtn.addEventListener("click", toggleFullScreenMode)
+  miniPlayerBtn.addEventListener("click", toggleMiniPlayerMode)
 
   function toggleTheaterMode() {
     videoContainer.classList.toggle("theater")
@@ -21,8 +23,24 @@ window.onload=function(){
     }
   }
 
+  function toggleMiniPlayerMode() {
+    if (videoContainer.classList.contains("mini-player")) {
+      document.exitPictureInPicture()
+    } else {
+      video.requestPictureInPicture()
+    }
+  }
+
   document.addEventListener("fullscreenchange", () => {
     videoContainer.classList.toggle("full-screen", document.fullscreenElement)
+  })
+
+  document.addEventListener("enterpictureinpicture", () => {
+    videoContainer.classList.add("mini-player")
+  })
+
+  document.addEventListener("leavepictureinpicture", () => {
+    videoContainer.classList.remove("mini-player")
   })
 
   // Play or pause 
