@@ -48,15 +48,6 @@ window.onload=function(){
     video.paused ? video.play() : video.pause()
   }
 
-  document.addEventListener("keydown", e => {
-    switch(e.key.toLowerCase()) {
-      case " ":
-      case "k":
-        togglePlay()
-        break
-    }
-  })
-
   playPauseBtn.addEventListener("click", togglePlay)
   video.addEventListener("click", togglePlay)
 
@@ -66,5 +57,23 @@ window.onload=function(){
 
   video.addEventListener("pause", () => {
     videoContainer.classList.add("paused")
+  })
+
+  document.addEventListener("keydown", e => {
+    switch(e.key.toLowerCase()) {
+      case " ":
+      case "k":
+        togglePlay()
+        break
+      case "f":
+        toggleFullScreenMode()
+        break
+      case "t":
+        toggleTheaterMode()
+        break
+      case "i":
+        toggleMiniPlayerMode()
+        break
+    }
   })
 }
