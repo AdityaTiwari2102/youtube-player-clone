@@ -22,6 +22,11 @@ function App() {
             {/* <FontAwesomeIcon icon={faPlay} className="play-icon" />
             <FontAwesomeIcon icon={faPause} className="pause-icon" /> */}
           </button>
+          <button className="mini-player-btn">
+            <svg viewBox="0 0 24 24">
+              <path fill="currentColor" d="M21 3H3c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H3V5h18v14zm-10-7h9v6h-9z"/>
+            </svg>
+          </button>
           <button className="full-screen-btn">
             <svg class="open" viewBox="0 0 24 24">
               <path fill="currentColor" d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/>
