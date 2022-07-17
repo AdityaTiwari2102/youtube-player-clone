@@ -84,6 +84,10 @@ video {
 }
 
 .video-container.paused .pause-icon,
-.video-container:not(.paused) .play-icon {
+.video-container:not(.paused) .play-icon,
+.video-container.theater .tall,
+.video-container:not(.theater) .wide,
+.video-container.full-screen .open,
+.video-container:not(.full-screen) .close {
   display: none
 }
